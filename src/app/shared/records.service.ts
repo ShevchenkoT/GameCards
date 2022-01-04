@@ -18,16 +18,16 @@ export class RecordsService {
   }
   getRecord(): Observable<Array<User>> {
     return this.http.get<User>(`${environment.rbDbUrl}/records`)
-      .pipe(
-        map((response: { [key: string]: any }) => {
-          return Object
-            .keys(response)
-            .map((key) => ({
-              ...response[key],
-              id: key,
-            }));
-        })
-      );
+      // .pipe(
+      //   map((response: { [key: string]: any }) => {
+      //     return Object
+      //       .keys(response)
+      //       .map((key) => ({
+      //         ...response[key],
+      //         id: key,
+      //       }));
+      //   })
+      // );
   }
 }
 
