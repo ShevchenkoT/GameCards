@@ -39,10 +39,12 @@ export class StartComponent {
       numberOfCard: new FormControl(20)
     });
     this.recordsService.getRecord().subscribe((allResults: Array<User>) => {
+      console.log(allResults);
+
       this.resultsFor10Cards = this.sortData(allResults, 10);
       this.resultsFor20Cards = this.sortData(allResults, 20);
       this.currentResults = this.resultsFor10Cards;
-    }, (err) => {
+    }, (err: any) => {
       console.log('Error:', err);
     });
   }
