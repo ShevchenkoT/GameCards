@@ -12,9 +12,9 @@ export class RecordsService {
   constructor(private http: HttpClient) { }
 
   setRecord(user: User): Observable<any> {
-    return this.http.post(`${environment.rbDbUrl}`, user);
+    return this.http.post(`${environment.rbDbUrl}/records`, user);
   }
   getRecord(): any {
-    return this.http.get<User>(`${environment.rbDbUrl}`);
+    return this.http.get<User>(`${environment.rbDbUrl}/records`);
   }
 }
