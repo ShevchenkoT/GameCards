@@ -14,10 +14,10 @@ export class RecordsService {
 
   setRecord(user: User): Observable<any> {
 
-    return this.http.post(`${environment.rbDbUrl}/record.json`, user);
+    return this.http.post(`${environment.rbDbUrl}/records`, user);
   }
   getRecord(): Observable<Array<User>> {
-    return this.http.get<User>(`${environment.rbDbUrl}/record.json`)
+    return this.http.get<User>(`${environment.rbDbUrl}/records`)
       .pipe(
         map((response: { [key: string]: any }) => {
           return Object
