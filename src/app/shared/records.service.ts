@@ -17,7 +17,7 @@ export class RecordsService {
     return this.http.post(`${environment.rbDbUrl}/records`, user);
   }
   getRecord(): Observable<Array<User>> {
-    return this.http.get<User>(`${environment.rbDbUrl}/records`)
+    return this.http.get<any>(`${environment.rbDbUrl}/records`)
       // .pipe(
       //   map((response: { [key: string]: any }) => {
       //     return Object
