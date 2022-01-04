@@ -39,8 +39,6 @@ export class StartComponent {
       numberOfCard: new FormControl(20)
     });
     this.recordsService.getRecord().subscribe((allResults: Array<User>) => {
-      console.log(allResults);
-
       this.resultsFor10Cards = this.sortData(allResults, 10);
       this.resultsFor20Cards = this.sortData(allResults, 20);
       this.currentResults = this.resultsFor10Cards;
@@ -115,7 +113,6 @@ export class StartComponent {
     this.form.get('nickname')?.setValue(inputValue);
   }
   version() {
-
-    console.log('v2');
+    console.log('v3.0.0');
   }
 }
