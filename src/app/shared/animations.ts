@@ -9,6 +9,7 @@ export const rotateCard = [
       transform: 'rotateY(180deg) scale(1)',
     })),
     state('invalid', style({
+      transition: "all .7s linear",
       boxShadow: 'none',
       transform: 'rotateY(0deg)',
       background: 'rgba(73, 73, 73, 0)'

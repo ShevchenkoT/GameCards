@@ -113,6 +113,6 @@ export class StartComponent {
     this.form.get('nickname')?.setValue(inputValue);
   }
   version() {
-    console.log('v3.0.0');
+    console.log('v3.0.1');
   }
 }
